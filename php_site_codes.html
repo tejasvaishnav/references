@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Site Common Codes</title> 
+    <link rel="icon" type="image/png" href="favicon.png">  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PHP Site Common Codes: </h1>
+
+    <code><pre>
+        &lt;?php
+            define('base_url', 'http://kcgclients.com/shaby/site2/');
+            $pageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+        ?&gt;
+    </pre></code>
+</body>
+</html>
