@@ -8,13 +8,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>PHP Site Common Codes: </h1>
-
+    <h1>PHP Site Common Codes: <button id="btn1" type="button" onclick="window.location.href='index.html';">Back</button></h1>
+    <!-- ===================================== -->
+    <h2>Add this in head.php above html code so we can identify pageName </h2>    
     <code><pre>
         &lt;?php
             define('base_url', 'http://kcgclients.com/shaby/site2/');
             $pageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
         ?&gt;
     </pre></code>
+    <!-- ===================================== -->
+    <h2>Include various file in main page</h2>
+    <code><pre>
+        &lt;?php require_once('head.php'); ?&gt;
+        &lt;?php require_once('top.php'); ?&gt;
+        &lt;?php require_once('banner.php'); ?&gt;
+        &lt;?php require_once('footer.php'); ?&gt;
+    </pre></code>
+    <!-- ===================================== -->
+    <h2>Include meta data using meta.php file</h2>
+    <code><pre>
+        &lt;?php require_once('meta.php'); ?&gt;
+        &lt;title&gt;&lt;?php echo $title ?&gt; &lt;/title&gt;
+        &lt;meta name="description" content="&lt;?php echo $meta_desc ?&gt;"&gt;
+        &lt;meta name="Keywords" content="&lt;?php echo $meta_keyword ?&gt;"&gt;
+    </pre></code>
+    <!-- ===================================== -->
+    <h2>Condititon for php code base on above $pageName declaration</h2>
+    <code><pre>
+        &lt;?php if($pageName == "index.php"){ ?&gt;On Home Page&lt;?php }else{?&gt;Other Pages &lt;?php    }?&gt;
+        &lt;?php if($pageName != "index.php" ){ ?&gt;Other pages &lt;?php }else{?&gt;on Home Page&lt;?php  } ?&gt;
+        &lt;?php if($pageName == "dental-services.php" || $pageName == "restorative-preventative.php"){ ?&gt;&lt;?php }?&gt;
+    </pre></code>
+    <!-- ===================================== -->
+    <h2>Php Echo Code</h2>
+    <code><pre>
+        ECHO "Hello!"; 
+        echo "Welcome to Developer News"; 
+        EcHo "Enjoy all of the ad-free articles";
+
+        $name = "Quincy";
+        echo "Hi! My name is " . $name . "!!!";
+    </pre></code>
+    <!-- ===================================== -->
+    <!-- ===================================== -->
+
+    
+
+    
+
+    
+
 </body>
 </html>
